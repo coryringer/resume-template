@@ -1,0 +1,117 @@
+% resume.tex
+\documentclass[10pt,letterpaper]{article}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref} % Hyperlinks
+\usepackage[scaled]{helvet} % Helvetica
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{resume} % Resume
+
+\begin{document}
+
+% Contact Info                                     
+\contactinfo
+  {John Doe}                          % name
+  {510 12th St.}                      % address
+  {Kirkland}                          % city
+  {WA 98033}                          % state zipcode
+  {5555555555}                        % phone number
+  {johndoe@johndoe.net}               % email
+  {\url{www.linkedin.com/in/johndoe}} % personal website
+
+% Experience
+\experience
+\begin{itemize}
+
+  \job
+    {Microsoft Corporation}  % name of company
+    {Redmond, WA}            % city, state
+    {.NET Developer}         % job title
+    {2015}                   % start date
+    {Present}                % end date/present
+    {\item Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.
+     \item Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur.
+     \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.}
+  
+  \job
+    {IBM Corporation}
+    {New York, NY}
+    {Software Engineer}
+    {2004}
+    {2015}
+    {\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.
+    \item Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur.}
+
+  \job
+    {Lucent Technologies, Inc.}
+    {Murray Hill, NJ}
+    {Computer Programmer}
+    {1996}
+    {2004}
+    {\item Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat.
+    \item Excepteur sint occaecat cupidatat
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+
+  \job
+    {AT\&T Bell Laboratories}
+    {Murray Hill, NJ}
+    {Computer Programmer}
+    {1980}
+    {1996}
+    {\item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+     tempor incididunt ut labore et dolore magna aliqua.
+    \item Excepteur sint occaecat cupidatat
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+    
+\end{itemize}
+
+% Education
+\education
+\begin{itemize}
+
+  \university
+  {Princeton University} % name of institution
+  {--Master of Science}  % degree  
+  {Princeton, NJ}        % city, state
+  {Mathematics}          % major
+  {Fall 1978}            % starting year
+  {Spring 1980}          % ending year
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  \university
+  {Massachusetts Institute of Technology}
+  {--Bachelor of Science}
+  {Cambridge, Massachusetts}
+  {Computer Science and Engineering}
+  {Fall 1974}
+  {Spring 1978}
+
+  Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  
+\end{itemize}
+
+  % Technical Skills
+  \skills                                
+    {\item \os Windows, Linux, AIX, Solaris, Mac OS X
+     \item \programming C++, C\#, Java, Common Lisp, RPG IV, Python}
+  
+
+\end{document}

@@ -1,0 +1,50 @@
+% ringer_resume.tex
+\documentclass[12pt,letterpaper]{article}
+\setlength\parindent{0pt}
+\pagestyle{empty}
+\usepackage{verbatim}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref} % Hyperlinks
+\usepackage[scaled]{helvet} % Helvetica
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{resume}
+
+% Utility macros
+\newcommand{\bigtitle}[1]{\textbf{\MakeUppercase{#1}} \\}
+
+\begin{document}
+
+\refcontactinfo
+  {John Doe}
+  {510 12th St.}
+  {Kirkland}
+  {WA 98033}
+  {5555555555}
+  {johndoe@johndoe.net}
+
+\bigtitle{References}
+
+\reference
+  {Robert Pike}
+  {Software Engineer}{Google}
+  {9999999999}
+  {robertpike@robertpike.com}
+  {Robert Pike was my boss at AT\&T Bell Laboratories.}
+
+\reference
+  {Jerry Goodman}
+  {Senior .NET Developer}{Microsoft Corporation}
+  {2222222222}
+  {jerrygoodman@jerrygoodman.net}
+  {Jerry Goodman is my current boss at Microsoft.}
+
+\reference
+  {Virginia Rometty}
+  {Chairman, President, and CEO}{IBM Corporation}
+  {4444444444}
+  {ginnirometty@ginnirometty.net}
+  {Virginia Rometty was my former big boss at IBM.}
+
+\end{document}

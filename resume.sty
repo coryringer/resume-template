@@ -1,0 +1,97 @@
+% resume.sty
+\RequirePackage{mdwlist}
+\RequirePackage{wasysym} % Phone number formatting
+\RequirePackage{phonenumbers}
+
+% Utility macros
+\newcommand{\newspace}{.1in}
+\newcommand{\education}{
+  \subsection*{\MakeUppercase{Education}}
+  \hrule \vspace{\newspace}}
+\newcommand{\experience}{
+  \subsection*{\MakeUppercase{Professional Experience}}
+  \hrule \vspace{\newspace}}
+
+% Format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]{
+  \begin{tabular*}
+    {\linewidth}
+    {l@{\extracolsep{\fill}}r}
+    {#1} &
+    {#2} \\
+\end{tabular*}}
+
+% Contact info macros
+\newcommand{\resaddress}[3]{{#1}, {#2}, {#3} \ | \ }
+\newcommand{\resphone}[1]{\phone \phonenumber[country=US]{#1} \ | \ }
+\newcommand{\resemail}[1]{\href{mailto:{#1}}{#1} \\}
+\newcommand{\contactinfo}[7]{
+  \begin{center}
+    {\huge \textbf{#1}} \\
+    \vspace{.1in}
+    \resaddress{#2}{#3}{#4}
+    \resphone{#5}
+    \resemail{#6}
+             {#7}
+\end{center}}
+
+% Work and education macros
+\newcommand{\dateto}[2]{{#1} -- {#2}}
+\newcommand{\company}[2]{\headerrow{\textbf{#1}}{\textbf{#2}}}
+\newcommand{\jobtitle}[3]{\headerrow{\emph{#1}}{\emph{\dateto{#2}{#3}}}}
+\newcommand{\university}[6]{
+\item
+  \company{{#1}\textnormal{\emph{#2}}}{#3}
+  \jobtitle{#4}{#5}{#6}}
+\newcommand{\work}[5]{\item \company{#1}{#2} \jobtitle{#3}{#4}{#5}}
+\newcommand{\job}[6]{
+  \work{#1}{#2}{#3}{#4}{#5}
+  \begin{itemize*}
+    {#6}
+\end{itemize*}}
+
+% Technical skills macros
+\newcommand{\applications}{\textbf{\textit{Applications}: }}
+\newcommand{\os}{\textbf{\textit{Operating Systems}: }}
+\newcommand{\programming}{\textbf{\textit{Programming Languages}: }}
+\newcommand{\skills}[1]{
+  \subsection*{\MakeUppercase{Technical Skills}}
+  \hrule
+  \vspace{\newspace}
+  \begin{itemize*}
+    {#1}
+\end{itemize*}}
+
+% Relevant courses
+\newcommand{\courses}[1]{
+  \begin{description}
+  \item \hspace{.1in}
+    \textbf{Relevant Courses:}
+    \vspace{-.05in}
+    \begin{itemize*}
+      {#1}
+    \end{itemize*}
+\end{description}}
+
+% References macros
+\newcommand{\referenceaddress}[3]{{#1} \\ {#2}, {#3} \\}
+\newcommand{\referencename}[1]{\textbf{#1} \\}
+\newcommand{\referencejob}[2]{{#1} \\ {#2} \\}
+\newcommand{\referencephone}[1]{\phone \phonenumber[country=US]{#1} \\}
+\newcommand{\referencemail}[1]{\href{mailto:{#1}}{#1} \\}
+\newcommand{\referencerel}[1]{\textit{Relationship}: {#1} \\}
+
+\newcommand{\refcontactinfo}[6]{
+  \begin{flushright}
+    \referencename{#1}
+    \referenceaddress{#2}{#3}{#4}
+    \referencephone{#5}
+    \referencemail{#6}
+\end{flushright}}
+
+\newcommand{\reference}[6]{
+  \referencename{#1}
+  \referencejob{#2}{#3}
+  \referencephone{#4}
+  \referencemail{#5}
+  \referencerel{#6}}
