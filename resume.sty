@@ -55,7 +55,7 @@
 \newcommand{\os}{\textbf{\textit{Operating Systems}: }}
 \newcommand{\programming}{\textbf{\textit{Programming Languages}: }}
 \newcommand{\skills}[1]{
-  \subsection*{\MakeUppercase{Technical Skills}}
+  \subsection*{\MakeUppercase{Skills}}
   \hrule
   \vspace{\newspace}
   \begin{itemize*}
@@ -82,12 +82,10 @@
 \newcommand{\referencerel}[1]{\textit{Relationship}: {#1} \\}
 
 \newcommand{\refcontactinfo}[6]{
-  \begin{flushright}
     \referencename{#1}
     \referenceaddress{#2}{#3}{#4}
     \referencephone{#5}
-    \referencemail{#6}
-\end{flushright}}
+    \referencemail{#6}}
 
 \newcommand{\reference}[6]{
   \referencename{#1}
@@ -95,3 +93,11 @@
   \referencephone{#4}
   \referencemail{#5}
   \referencerel{#6}}
+
+% Cover letter macros
+\newcommand{\coverletterref}[8]{
+  \referencename{#1}
+  \referencejob{#2}{#3}
+  \referenceaddress{#4}{#5}{#6}
+  \referencephone{#7}
+  \referencemail{#8}}
